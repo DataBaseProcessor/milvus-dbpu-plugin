@@ -33,3 +33,7 @@ if(DBPU_PLUGIN_BUILD_TESTS)
   add_executable(test_plugin tests/test_plugin.cpp)
   target_link_libraries(test_plugin PRIVATE dbpu_plugin)
 endif()
+
+
+add_executable(test_loader tests/test_loader.cpp)
+target_link_libraries(test_loader PRIVATE dbpu_plugin)

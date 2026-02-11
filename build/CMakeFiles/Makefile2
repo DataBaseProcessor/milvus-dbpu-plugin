@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build
 
 # The main recursive "all" target.
 all: CMakeFiles/dbpu_plugin.dir/all
+all: CMakeFiles/test_loader.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/dbpu_plugin.dir/codegen
+codegen: CMakeFiles/test_loader.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/dbpu_plugin.dir/clean
+clean: CMakeFiles/test_loader.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +112,38 @@ CMakeFiles/dbpu_plugin.dir/codegen:
 CMakeFiles/dbpu_plugin.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dbpu_plugin.dir/build.make CMakeFiles/dbpu_plugin.dir/clean
 .PHONY : CMakeFiles/dbpu_plugin.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_loader.dir
+
+# All Build rule for target.
+CMakeFiles/test_loader.dir/all: CMakeFiles/dbpu_plugin.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build/CMakeFiles --progress-num=7,8 "Built target test_loader"
+.PHONY : CMakeFiles/test_loader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_loader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_loader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_loader.dir/rule
+
+# Convenience name for target.
+test_loader: CMakeFiles/test_loader.dir/rule
+.PHONY : test_loader
+
+# codegen rule for target.
+CMakeFiles/test_loader.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build/CMakeFiles --progress-num=7,8 "Finished codegen for target test_loader"
+.PHONY : CMakeFiles/test_loader.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_loader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/clean
+.PHONY : CMakeFiles/test_loader.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

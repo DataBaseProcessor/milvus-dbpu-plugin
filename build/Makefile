@@ -129,6 +129,19 @@ dbpu_plugin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dbpu_plugin.dir/build.make CMakeFiles/dbpu_plugin.dir/build
 .PHONY : dbpu_plugin/fast
 
+#=============================================================================
+# Target rules for targets named test_loader
+
+# Build rule for target.
+test_loader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_loader
+.PHONY : test_loader
+
+# fast build rule for target.
+test_loader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/build
+.PHONY : test_loader/fast
+
 src/interceptor.o: src/interceptor.cpp.o
 .PHONY : src/interceptor.o
 
@@ -249,6 +262,30 @@ src/runtime_loader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dbpu_plugin.dir/build.make CMakeFiles/dbpu_plugin.dir/src/runtime_loader.cpp.s
 .PHONY : src/runtime_loader.cpp.s
 
+tests/test_loader.o: tests/test_loader.cpp.o
+.PHONY : tests/test_loader.o
+
+# target to build an object file
+tests/test_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/tests/test_loader.cpp.o
+.PHONY : tests/test_loader.cpp.o
+
+tests/test_loader.i: tests/test_loader.cpp.i
+.PHONY : tests/test_loader.i
+
+# target to preprocess a source file
+tests/test_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/tests/test_loader.cpp.i
+.PHONY : tests/test_loader.cpp.i
+
+tests/test_loader.s: tests/test_loader.cpp.s
+.PHONY : tests/test_loader.s
+
+# target to generate assembly for a file
+tests/test_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_loader.dir/build.make CMakeFiles/test_loader.dir/tests/test_loader.cpp.s
+.PHONY : tests/test_loader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,6 +295,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dbpu_plugin"
+	@echo "... test_loader"
 	@echo "... src/interceptor.o"
 	@echo "... src/interceptor.i"
 	@echo "... src/interceptor.s"
@@ -273,6 +311,9 @@ help:
 	@echo "... src/runtime_loader.o"
 	@echo "... src/runtime_loader.i"
 	@echo "... src/runtime_loader.s"
+	@echo "... tests/test_loader.o"
+	@echo "... tests/test_loader.i"
+	@echo "... tests/test_loader.s"
 .PHONY : help
 
 
