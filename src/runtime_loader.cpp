@@ -48,6 +48,14 @@ RuntimeLoader::RuntimeLoader() {
     };
 
     for (int i = 0; libs[i]; ++i) {
+        const char* env = getenv("DBPU_RUNTIME_SO");
+        if (env && env[0]) {
+            g_rt.handle = dlopen(env, RTLD_LAZY | RTLD_LOCAL);
+            if (g_rt.handle) {
+                return; /* loaded from env */
+            }
+        }
+
         g_rt.handle = dlopen(libs[i], RTLD_LAZY | RTLD_LOCAL);
         if (g_rt.handle) break;
     }

@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/jaegeunpark/Documents/GitHub/milvus-dbpu-plugin/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

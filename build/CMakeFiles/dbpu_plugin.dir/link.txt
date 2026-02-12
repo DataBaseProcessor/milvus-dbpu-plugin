@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdbpu_plugin.a CMakeFiles/dbpu_plugin.dir/src/runtime_loader.cpp.o CMakeFiles/dbpu_plugin.dir/src/interceptor.cpp.o CMakeFiles/dbpu_plugin.dir/src/logger.cpp.o CMakeFiles/dbpu_plugin.dir/src/profiler.cpp.o CMakeFiles/dbpu_plugin.dir/src/offload.cpp.o
-/opt/homebrew/opt/llvm/bin/llvm-ranlib libdbpu_plugin.a

@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(DBPU_PLUGIN_BUILD_TESTS "Build plugin tests" OFF)
 
-add_library(dbpu_plugin STATIC
+add_library(dbpu_plugin SHARED
+  src/knowhere_hooks.cpp
   src/runtime_loader.cpp
   src/interceptor.cpp
   src/logger.cpp
